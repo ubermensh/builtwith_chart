@@ -1,7 +1,7 @@
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
-DOMAINS_TO_PROCESS = "input_sites/tony_list.dat"
+DOMAINS_TO_PROCESS = "input_sites/tony1.dat"
 
 FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
 pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
