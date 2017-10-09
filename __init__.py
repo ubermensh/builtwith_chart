@@ -20,14 +20,18 @@ for k in data.keys():
 table.add_row(row)
 print table
 '''
-DOMAINS_TO_PROCESS = "similarweb_list.dat"
+DOMAINS_TO_PROCESS = "input_sites/tony_list.dat"
 FIELD_NAMES = ['site', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
-rawResultFile = open("raw_results.dat", "w")
+ 
 pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
+LIST_LENGTH = str(len(pornsites))
+rawResultFile = open("raw_results.dat", "w")
 table = PrettyTable()
 table.field_names = FIELD_NAMES
+n = 1
 for site in pornsites:
-    print site
+    print str(n) + " of " + LIST_LENGTH + ": " + site
+    n += 1
     data = ast.literal_eval(json.dumps(builtwith('http://' + site)))
     data['site'] = [site]
     rawResultFile.write(str(data) + '\n')
