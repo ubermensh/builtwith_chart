@@ -1,28 +1,9 @@
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
-
-# bw = builtwith('http://cam4.com')
-# print(bw)
-
-# res = json.dumps({u'web-servers': [u'Nginx'], u'javascript-frameworks': [u'Prototype', u'RequireJS', u'jQuery'], u'tag-managers': [u'Google Tag Manager'], u'programming-languages': [u'Java'], u'databases': [u'Firebase'], u'web-frameworks': [u'Twitter Bootstrap']})
-'''
-dct  = ({'site': ['porn.com'], u'web-servers': [u'Nginx'], u'javascript-frameworks': [u'Prototype', u'RequireJS', u'jQuery'], u'tag-managers': [u'Google Tag Manager'], u'programming-languages': [u'Java'], u'databases': [u'Firebase'], u'web-frameworks': [u'Twitter Bootstrap']})
-data = ast.literal_eval(json.dumps(dct))
-print data.keys()
-site = 'aaaa'
-data['site'] = [site]
-table = PrettyTable()
-table.field_names = data.keys()
-row = []
-for k in data.keys():
-    row.append(" ,".join(data[k]))
-table.add_row(row)
-print table
-'''
 DOMAINS_TO_PROCESS = "input_sites/tony_list.dat"
-FIELD_NAMES = ['site', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
- 
+
+FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
 pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
 LIST_LENGTH = str(len(pornsites))
 rawResultFile = open("raw_results.dat", "w")
@@ -42,7 +23,7 @@ for site in pornsites:
         except KeyError:
             fieldInfo = ' '
             pass
-        row.append(" ,".join(fieldInfo))
+        row.append(", ".join(fieldInfo))
 
     table.add_row(row)
 
@@ -50,3 +31,22 @@ table_txt = table.get_string()
 with open('formatted_results.dat','w') as file:
     file.write(table_txt)
 
+
+# bw = builtwith('http://cam4.com')
+# print(bw)
+
+# res = json.dumps({u'web-servers': [u'Nginx'], u'javascript-frameworks': [u'Prototype', u'RequireJS', u'jQuery'], u'tag-managers': [u'Google Tag Manager'], u'programming-languages': [u'Java'], u'databases': [u'Firebase'], u'web-frameworks': [u'Twitter Bootstrap']})
+'''
+dct  = ({'site': ['porn.com'], u'web-servers': [u'Nginx'], u'javascript-frameworks': [u'Prototype', u'RequireJS', u'jQuery'], u'tag-managers': [u'Google Tag Manager'], u'programming-languages': [u'Java'], u'databases': [u'Firebase'], u'web-frameworks': [u'Twitter Bootstrap']})
+data = ast.literal_eval(json.dumps(dct))
+print data.keys()
+site = 'aaaa'
+data['site'] = [site]
+table = PrettyTable()
+table.field_names = data.keys()
+row = []
+for k in data.keys():
+    row.append(" ,".join(data[k]))
+table.add_row(row)
+print table
+'''
