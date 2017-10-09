@@ -1,5 +1,3 @@
-from urllib import urlopen
-from bs4 import BeautifulSoup
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
@@ -22,18 +20,17 @@ for k in data.keys():
 table.add_row(row)
 print table
 '''
-
-rawResultFile = open("rawResults.dat", "w")
-pornsites = open("short.dat", "r").read().splitlines()
-table = PrettyTable()
+DOMAINS_TO_PROCESS = "similarweb_list.dat"
 FIELD_NAMES = ['site', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
+rawResultFile = open("raw_results.dat", "w")
+pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
+table = PrettyTable()
 table.field_names = FIELD_NAMES
 for site in pornsites:
     print site
     data = ast.literal_eval(json.dumps(builtwith('http://' + site)))
     data['site'] = [site]
-    rawResultFile.write(str(data) + '/n')
-
+    rawResultFile.write(str(data) + '\n')
     row = []
     for k in FIELD_NAMES:
         try:
@@ -45,14 +42,7 @@ for site in pornsites:
 
     table.add_row(row)
 
-# resultFile.write(table)
 table_txt = table.get_string()
-with open('results.dat','w') as file:
+with open('formatted_results.dat','w') as file:
     file.write(table_txt)
 
-
-# webpage = urlopen('https://www.cam4.com/').read()
-# soup = BeautifulSoup(webpage, 'lxml')
-# metas = soup.find_all("meta")
-# print(type(metas))
-# print(pornsites[955])
