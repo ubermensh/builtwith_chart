@@ -1,12 +1,11 @@
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
-DOMAINS_TO_PROCESS = "input_sites/tony1.dat"
-
-FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'cms', 'blogs', 'operating-systems', 'miscellaneous', 'video-players' ]
+DOMAINS_TO_PROCESS = "input_sites/steve_list.dat"
+FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'operating-systems']
 pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
 LIST_LENGTH = str(len(pornsites))
-rawResultFile = open("raw_results.dat", "w")
+rawResultFile = open('raw_'+ DOMAINS_TO_PROCESS[12:],'w+')
 table = PrettyTable()
 table.field_names = FIELD_NAMES
 n = 1
@@ -25,10 +24,11 @@ for site in pornsites:
             pass
         row.append(", ".join(fieldInfo))
 
+    print str(data)
     table.add_row(row)
 
 table_txt = table.get_string()
-with open('formatted_results.dat','w') as file:
+with open('result_'+ DOMAINS_TO_PROCESS[12:],'w+') as file:
     file.write(table_txt)
 
 

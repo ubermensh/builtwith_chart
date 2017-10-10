@@ -1,0 +1,24 @@
++----------------------+-----------+-------------+------------------------------+--------------------+-----------------------+-----------+-------------------+-------------------+
+|         site         | analytics | web-servers |    javascript-frameworks     |    tag-managers    | programming-languages | databases |   web-frameworks  | operating-systems |
++----------------------+-----------+-------------+------------------------------+--------------------+-----------------------+-----------+-------------------+-------------------+
+|       cam4.com       |           |    Nginx    | Prototype, RequireJS, jQuery | Google Tag Manager |          Java         |  Ferebase | Twitter Bootstrap |                   |
+|    hotmovies.com     |           |    Apache   |                              | Google Tag Manager |                       |           |                   |                   |
+|    clips4sale.com    |           |             |                              |                    |                       |           | Twitter Bootstrap |                   |
+|     porntube.com     |           |    Nginx    | Prototype, RequireJS, jQuery |                    |                       |           | Twitter Bootstrap |                   |
+|    flirt4free.com    |           |    Apache   |                              |                    |                       |           |                   |                   |
+|      mrskin.com      |           |    Nginx    |     Prototype, RequireJS     |                    |          Ruby         |           |   Ruby on Rails   |                   |
+|    adultwork.com     |           |     IIS     |                              |                    |                       |           |                   |   Windows Server  |
+| www.vivastreet.co.uk |           |             |     Prototype, RequireJS     |                    |                       |           |                   |                   |
+|      imlive.com      |           |     IIS     |            jQuery            |                    |                       |           | Microsoft ASP.NET |   Windows Server  |
+|     shemale.xxx      |           |    Apache   |      jQuery, Modernizr       |                    |                       |           |                   |                   |
+|     xhamster.com     |           |    Nginx    |      Prototype, jQuery       |                    |                       |           |                   |                   |
+|    stripchat.com     |           |    Nginx    |                              |                    |                       |           |                   |                   |
+|  realitylovers.com   |           |    Nginx    |  jQuery, Modernizr, Select2  |                    |          Java         |           |                   |                   |
+|  trafficpartner.com  |           |    Apache   |            jQuery            |                    |                       |           |                   |                   |
+|       xxx.xxx        |           |    Apache   |      jQuery, jQuery UI       |                    |          PHP          |           |                   |        UNIX       |
+|       porn.com       |   Piwik   |    Nginx    |      RequireJS, jQuery       |                    |                       |           |                   |                   |
+|     mojohost.com     |           |    Apache   | jQuery, Modernizr, jQuery UI |                    |                       |           | Twitter Bootstrap |                   |
+|   adultcentro.com    |           |    Nginx    | Prototype, RequireJS, jQuery |                    |                       |           |                   |                   |
+|     porndoe.com      |           |    Nginx    |            jQuery            | Google Tag Manager |                       |           | Twitter Bootstrap |                   |
+| bitterstrawberry.com |           |    Nginx    |            jQuery            |                    |                       |           |                   |                   |
++----------------------+-----------+-------------+------------------------------+--------------------+-----------------------+-----------+-------------------+-------------------+
