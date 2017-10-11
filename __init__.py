@@ -1,7 +1,7 @@
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
-DOMAINS_TO_PROCESS = "input_sites/short_list.dat"
+DOMAINS_TO_PROCESS = "input_sites/reddit_list.dat"
 FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'operating-systems']
 pornsites = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
 LIST_LENGTH = str(len(pornsites))
@@ -20,6 +20,7 @@ rawResultFile = open('raw_'+ DOMAINS_TO_PROCESS[12:],'w+')
 table = PrettyTable()
 table.field_names = FIELD_NAMES
 n = 1
+a = 5 
 for site in pornsites:
     print str(n) + " of " + LIST_LENGTH + ": " + site
     n += 1
