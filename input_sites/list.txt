@@ -1,0 +1,4 @@
+google.com
+github.com
+pypi.python.org
+en.wikipedia.org

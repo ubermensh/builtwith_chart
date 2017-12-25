@@ -1,7 +1,7 @@
 from builtwith import builtwith
 from prettytable import PrettyTable
 import json, ast, pprint
-DOMAINS_TO_PROCESS = "input_sites/reddit_list.dat"
+DOMAINS_TO_PROCESS = "input_sites/list.txt"
 FIELD_NAMES = ['site','analytics', 'web-servers', 'javascript-frameworks', 'tag-managers', 'programming-languages', 'databases', 'web-frameworks', 'operating-systems']
 sites_list = open(DOMAINS_TO_PROCESS, "r").read().splitlines()
 LIST_LENGTH = str(len(sites_list))
@@ -16,7 +16,7 @@ def __makeRow(data):
         row.append(", ".join(fieldInfo))
     return row
 
-rawResultFile = open('raw_'+ DOMAINS_TO_PROCESS[12:],'w+')
+rawResultFile = open('result/raw_'+ DOMAINS_TO_PROCESS[12:],'w+')
 table = PrettyTable()
 table.field_names = FIELD_NAMES
 n=1
@@ -32,6 +32,6 @@ for site in sites_list:
 
 
 table_txt = table.get_string()
-with open('result_'+ DOMAINS_TO_PROCESS[12:],'w+') as file:
+with open('result/table_'+ DOMAINS_TO_PROCESS[12:],'w+') as file:
     file.write(table_txt)
 
