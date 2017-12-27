@@ -24,10 +24,10 @@ It will generage 2 file: raw_list.txt and table_list.txt, withd detected technol
 
 ### Installing
 
-
+```
 pip install builtwith
 pip install prettytable
-
+```
 
 End with an example of getting some data out of the system or using it for a little demo
 
