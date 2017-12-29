@@ -4,6 +4,11 @@ Takes a list of url's as input, produce chart with technology lookup info for ea
 
 ## usage
 
+```
+pip install builtwith
+pip install prettytable
+```
+
 put a list of sites in input_sites/list.txt, run command
 ```
 python __init__.py
@@ -19,16 +24,6 @@ It will generage 2 file: raw_list.txt and table_list.txt, withd detected technol
 | en.wikipedia.org |           |        HHVM       |                       |              |          PHP          |           |                   |                   |
 +------------------+-----------+-------------------+-----------------------+--------------+-----------------------+-----------+-------------------+-------------------+
 ```
-
-   
-
-### Installing
-
-```
-pip install builtwith
-pip install prettytable
-```
-
 
 ## Built With (LOL)
 
